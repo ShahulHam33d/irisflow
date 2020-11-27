@@ -17,7 +17,7 @@ def predict():
     prediction = model.predict(final_features)
     conv = {1 : "iris setosa",2 : 'iris versicolor', 3 : "iris verginica"}
     pred = conv[prediction]
-    output = round(prediction[0],2)
+    output = round(pred[0],2)
 
     return render_template("index.html",prediction_text="the species is {}".format(output))
 
